@@ -49,8 +49,8 @@ before_install:
  - mkdir -p ~/.local/bin
  - export PATH=~/.local/bin:$PATH
  - if [ "$STACK_RESOLVER" == "" ];
-   then STACK=stack;
-   else STACK="stack --resolver=$STACK_RESOLVER";
+   then STACK="stack --no-terminal;
+   else STACK="stack --no-terminal --resolver=$STACK_RESOLVER";
    fi
  - export STACKVER=1.0.4.2
  - wget https://github.com/commercialhaskell/stack/releases/download/v1.0.4/stack-${STACKVER}-linux-x86_64.tar.gz
